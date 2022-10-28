@@ -8,7 +8,7 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
-    fefe
+    
     var username: String = ""
     var password: String = ""
     @Published var showProgressView = false

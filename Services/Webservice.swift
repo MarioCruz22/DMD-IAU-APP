@@ -34,7 +34,7 @@ class Webservice {
     
     func login(username: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
         
-        guard let url = URL(string: "http://172.22.21.135/api/token/") else {
+        guard let url = URL(string: "http://172.22.21.135:3306/api/token/") else {
             completion(.failure(.custom(errorMessage: "URL is not correct")))
             return
         }
