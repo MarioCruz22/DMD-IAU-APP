@@ -48,8 +48,6 @@
 		88523100263272E200DBCF3F /* loginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8852311626329DCF00DBCF3F /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
 		8852311E2632A4D500DBCF3F /* SignInScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenView.swift; sourceTree = "<group>"; };
-		88934F422634229600B116CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		88934F432634232200B116CA /* ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui.png; sourceTree = "<group>"; };
 		EB31D057290C375C006F6383 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,8 +97,6 @@
 			children = (
 				8852311526329DBA00DBCF3F /* Screens */,
 				2C4AAFA52909741E0077DE33 /* Services */,
-				88934F432634232200B116CA /* ui.png */,
-				88934F422634229600B116CA /* README.md */,
 				885230E6263272E100DBCF3F /* login */,
 				885230E5263272E100DBCF3F /* Products */,
 			);
@@ -439,15 +435,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"login/Preview Content\"";
-				DEVELOPMENT_TEAM = U5YT557MLX;
+				DEVELOPMENT_TEAM = KVXU5G86CS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = login/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = TheSwiftUIWay.login6;
+				PRODUCT_BUNDLE_IDENTIFIER = TheSwiftUIWay.login7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -461,15 +457,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"login/Preview Content\"";
-				DEVELOPMENT_TEAM = U5YT557MLX;
+				DEVELOPMENT_TEAM = KVXU5G86CS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = login/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = TheSwiftUIWay.login6;
+				PRODUCT_BUNDLE_IDENTIFIER = TheSwiftUIWay.login7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

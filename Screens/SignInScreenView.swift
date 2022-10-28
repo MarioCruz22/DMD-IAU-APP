@@ -10,6 +10,7 @@ import SwiftUI
 struct SignInScreenView: View {
     @StateObject var loginVM = LoginViewModel()
     @EnvironmentObject var authentication: Authentication
+    @FocusState private var focus: Bool
     var body: some View {
         
         
@@ -37,6 +38,7 @@ struct SignInScreenView: View {
                         .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0, y: 16)
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
+                        .focused($focus)
                     
                     SecureField("Password", text: $loginVM.password)
                         .font(.title3)
@@ -44,9 +46,11 @@ struct SignInScreenView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color.white)
                         .cornerRadius(50.0)
+                        .focused($focus)
                         .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0, y: 16)
                     
                     Button {
+                        focus = false
                         loginVM.login { success in
                             authentication.updateValidation(success: success)
                         }
