@@ -10,6 +10,15 @@
 		2C4AAFA72909741F0077DE33 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AAFA62909741E0077DE33 /* Webservice.swift */; };
 		2C4AAFAB290974310077DE33 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AAFA9290974310077DE33 /* LoginViewModel.swift */; };
 		2C4AAFAE29098BA60077DE33 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AAFAD29098BA60077DE33 /* Authentication.swift */; };
+		55FA22E02912D2DD0009A994 /* DriverAssistant in Resources */ = {isa = PBXBuildFile; fileRef = 55FA22DF2912D2DD0009A994 /* DriverAssistant */; };
+		55FA22ED2912D3B10009A994 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA22E92912D3B10009A994 /* NavigationView.swift */; };
+		55FA22EF2912D3B10009A994 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA22EB2912D3B10009A994 /* SettingsView.swift */; };
+		55FA22F02912D3B10009A994 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA22EC2912D3B10009A994 /* DisplayView.swift */; };
+		55FA22FD2912D5440009A994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA22FA2912D5440009A994 /* ViewController.swift */; };
+		55FA22FE2912D5440009A994 /* ViewControllerDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA22FB2912D5440009A994 /* ViewControllerDetection.swift */; };
+		55FA22FF2912D5440009A994 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA22FC2912D5440009A994 /* LocationViewController.swift */; };
+		55FA23032912D5BF0009A994 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA23012912D5BF0009A994 /* Constants.swift */; };
+		55FA23042912D5BF0009A994 /* yolov5sTraffic.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55FA23022912D5BF0009A994 /* yolov5sTraffic.mlmodel */; };
 		885230E8263272E100DBCF3F /* loginApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885230E7263272E100DBCF3F /* loginApp.swift */; };
 		885230EC263272E200DBCF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885230EB263272E200DBCF3F /* Assets.xcassets */; };
 		885230EF263272E200DBCF3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885230EE263272E200DBCF3F /* Preview Assets.xcassets */; };
@@ -39,6 +48,15 @@
 		2C4AAFA62909741E0077DE33 /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		2C4AAFA9290974310077DE33 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2C4AAFAD29098BA60077DE33 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		55FA22DF2912D2DD0009A994 /* DriverAssistant */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DriverAssistant; path = "../Driver-Assistant-main/DriverAssistant"; sourceTree = "<group>"; };
+		55FA22E92912D3B10009A994 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		55FA22EB2912D3B10009A994 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		55FA22EC2912D3B10009A994 /* DisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
+		55FA22FA2912D5440009A994 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewControllers/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		55FA22FB2912D5440009A994 /* ViewControllerDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerDetection.swift; path = ViewControllers/ViewControllerDetection.swift; sourceTree = SOURCE_ROOT; };
+		55FA22FC2912D5440009A994 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationViewController.swift; path = ViewControllers/LocationViewController.swift; sourceTree = SOURCE_ROOT; };
+		55FA23012912D5BF0009A994 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		55FA23022912D5BF0009A994 /* yolov5sTraffic.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = yolov5sTraffic.mlmodel; sourceTree = "<group>"; };
 		885230E4263272E100DBCF3F /* login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885230E7263272E100DBCF3F /* loginApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginApp.swift; sourceTree = "<group>"; };
 		885230EB263272E200DBCF3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,9 +110,31 @@
 			path = "View Models";
 			sourceTree = SOURCE_ROOT;
 		};
+		55FA22F92912D4DB0009A994 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				55FA22FC2912D5440009A994 /* LocationViewController.swift */,
+				55FA22FA2912D5440009A994 /* ViewController.swift */,
+				55FA22FB2912D5440009A994 /* ViewControllerDetection.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		55FA23002912D5680009A994 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55FA23012912D5BF0009A994 /* Constants.swift */,
+				55FA23022912D5BF0009A994 /* yolov5sTraffic.mlmodel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		885230DB263272E100DBCF3F = {
 			isa = PBXGroup;
 			children = (
+				55FA23002912D5680009A994 /* Models */,
+				55FA22F92912D4DB0009A994 /* ViewControllers */,
+				55FA22DF2912D2DD0009A994 /* DriverAssistant */,
 				8852311526329DBA00DBCF3F /* Screens */,
 				2C4AAFA52909741E0077DE33 /* Services */,
 				885230E6263272E100DBCF3F /* login */,
@@ -136,6 +176,9 @@
 		8852311526329DBA00DBCF3F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				55FA22EC2912D3B10009A994 /* DisplayView.swift */,
+				55FA22E92912D3B10009A994 /* NavigationView.swift */,
+				55FA22EB2912D3B10009A994 /* SettingsView.swift */,
 				8852311626329DCF00DBCF3F /* WelcomeScreenView.swift */,
 				8852311E2632A4D500DBCF3F /* SignInScreenView.swift */,
 				EB31D057290C375C006F6383 /* CameraView.swift */,
@@ -247,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				885230EF263272E200DBCF3F /* Preview Assets.xcassets in Resources */,
+				55FA22E02912D2DD0009A994 /* DriverAssistant in Resources */,
 				885230EC263272E200DBCF3F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,10 +318,18 @@
 			files = (
 				8852311F2632A4D500DBCF3F /* SignInScreenView.swift in Sources */,
 				EB31D058290C375C006F6383 /* CameraView.swift in Sources */,
+				55FA22ED2912D3B10009A994 /* NavigationView.swift in Sources */,
 				8852311726329DCF00DBCF3F /* WelcomeScreenView.swift in Sources */,
 				2C4AAFAB290974310077DE33 /* LoginViewModel.swift in Sources */,
+				55FA23032912D5BF0009A994 /* Constants.swift in Sources */,
+				55FA22EF2912D3B10009A994 /* SettingsView.swift in Sources */,
+				55FA22FD2912D5440009A994 /* ViewController.swift in Sources */,
+				55FA22FF2912D5440009A994 /* LocationViewController.swift in Sources */,
 				2C4AAFA72909741F0077DE33 /* Webservice.swift in Sources */,
+				55FA22F02912D3B10009A994 /* DisplayView.swift in Sources */,
+				55FA22FE2912D5440009A994 /* ViewControllerDetection.swift in Sources */,
 				885230E8263272E100DBCF3F /* loginApp.swift in Sources */,
+				55FA23042912D5BF0009A994 /* yolov5sTraffic.mlmodel in Sources */,
 				2C4AAFAE29098BA60077DE33 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
