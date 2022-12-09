@@ -20,7 +20,9 @@ struct WelcomeScreenView: View {
                         Image(systemName: "camera.fill")
                         Text("Camera")
                 }
-                Text("Nearby Screen")
+                //Text("Nearby Screen")
+//            DisplayView()
+            DetectionsScreenView()
                     .tabItem {
                         Image(systemName: "eye.fill")
                         Text("D2Go")

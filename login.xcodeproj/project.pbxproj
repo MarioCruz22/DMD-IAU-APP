@@ -15,7 +15,16 @@
 		885230EF263272E200DBCF3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885230EE263272E200DBCF3F /* Preview Assets.xcassets */; };
 		8852311726329DCF00DBCF3F /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8852311626329DCF00DBCF3F /* WelcomeScreenView.swift */; };
 		8852311F2632A4D500DBCF3F /* SignInScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8852311E2632A4D500DBCF3F /* SignInScreenView.swift */; };
+		EB046FBA293977AF00CFF721 /* DetectionsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB046FB9293977AF00CFF721 /* DetectionsScreenView.swift */; };
 		EB31D058290C375C006F6383 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31D057290C375C006F6383 /* CameraView.swift */; };
+		EB3DEB8E293A577D00A6BC54 /* yolov5s.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EB3DEB8D293A577D00A6BC54 /* yolov5s.mlmodel */; };
+		EB3DEB92293A5A0600A6BC54 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DEB8F293A5A0600A6BC54 /* Measure.swift */; };
+		EB3DEB93293A5A0600A6BC54 /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DEB90293A5A0600A6BC54 /* UIImage+CVPixelBuffer.swift */; };
+		EB3DEB94293A5A0600A6BC54 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DEB91293A5A0600A6BC54 /* VideoCapture.swift */; };
+		EB8D291E293950000098431F /* mlmodel in Resources */ = {isa = PBXBuildFile; fileRef = EB8D291D293950000098431F /* mlmodel */; };
+		EB8D2924293950390098431F /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D2923293950380098431F /* DrawingBoundingBoxView.swift */; };
+		EB8D29292939513D0098431F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D29272939513D0098431F /* ViewController.swift */; };
+		EB8D292A2939513D0098431F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8D29282939513D0098431F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +59,16 @@
 		8852311E2632A4D500DBCF3F /* SignInScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenView.swift; sourceTree = "<group>"; };
 		88934F422634229600B116CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		88934F432634232200B116CA /* ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui.png; sourceTree = "<group>"; };
+		EB046FB9293977AF00CFF721 /* DetectionsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionsScreenView.swift; sourceTree = "<group>"; };
 		EB31D057290C375C006F6383 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		EB3DEB8D293A577D00A6BC54 /* yolov5s.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = yolov5s.mlmodel; sourceTree = "<group>"; };
+		EB3DEB8F293A5A0600A6BC54 /* Measure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
+		EB3DEB90293A5A0600A6BC54 /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		EB3DEB91293A5A0600A6BC54 /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		EB8D291D293950000098431F /* mlmodel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mlmodel; sourceTree = "<group>"; };
+		EB8D2923293950380098431F /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
+		EB8D29272939513D0098431F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB8D29282939513D0098431F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +115,7 @@
 		885230DB263272E100DBCF3F = {
 			isa = PBXGroup;
 			children = (
+				EB8D291729394B070098431F /* Detections */,
 				8852311526329DBA00DBCF3F /* Screens */,
 				2C4AAFA52909741E0077DE33 /* Services */,
 				88934F432634232200B116CA /* ui.png */,
@@ -143,8 +162,24 @@
 				8852311626329DCF00DBCF3F /* WelcomeScreenView.swift */,
 				8852311E2632A4D500DBCF3F /* SignInScreenView.swift */,
 				EB31D057290C375C006F6383 /* CameraView.swift */,
+				EB046FB9293977AF00CFF721 /* DetectionsScreenView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		EB8D291729394B070098431F /* Detections */ = {
+			isa = PBXGroup;
+			children = (
+				EB3DEB8F293A5A0600A6BC54 /* Measure.swift */,
+				EB3DEB90293A5A0600A6BC54 /* UIImage+CVPixelBuffer.swift */,
+				EB3DEB91293A5A0600A6BC54 /* VideoCapture.swift */,
+				EB3DEB8D293A577D00A6BC54 /* yolov5s.mlmodel */,
+				EB8D29282939513D0098431F /* Main.storyboard */,
+				EB8D29272939513D0098431F /* ViewController.swift */,
+				EB8D2923293950380098431F /* DrawingBoundingBoxView.swift */,
+				EB8D291D293950000098431F /* mlmodel */,
+			);
+			path = Detections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +285,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8D292A2939513D0098431F /* Main.storyboard in Resources */,
+				EB8D291E293950000098431F /* mlmodel in Resources */,
 				885230EF263272E200DBCF3F /* Preview Assets.xcassets in Resources */,
 				885230EC263272E200DBCF3F /* Assets.xcassets in Resources */,
 			);
@@ -277,12 +314,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8852311F2632A4D500DBCF3F /* SignInScreenView.swift in Sources */,
+				EB3DEB93293A5A0600A6BC54 /* UIImage+CVPixelBuffer.swift in Sources */,
 				EB31D058290C375C006F6383 /* CameraView.swift in Sources */,
+				EB3DEB92293A5A0600A6BC54 /* Measure.swift in Sources */,
 				8852311726329DCF00DBCF3F /* WelcomeScreenView.swift in Sources */,
+				EB8D29292939513D0098431F /* ViewController.swift in Sources */,
+				EB8D2924293950390098431F /* DrawingBoundingBoxView.swift in Sources */,
 				2C4AAFAB290974310077DE33 /* LoginViewModel.swift in Sources */,
+				EB3DEB94293A5A0600A6BC54 /* VideoCapture.swift in Sources */,
+				EB046FBA293977AF00CFF721 /* DetectionsScreenView.swift in Sources */,
 				2C4AAFA72909741F0077DE33 /* Webservice.swift in Sources */,
 				885230E8263272E100DBCF3F /* loginApp.swift in Sources */,
 				2C4AAFAE29098BA60077DE33 /* Authentication.swift in Sources */,
+				EB3DEB8E293A577D00A6BC54 /* yolov5s.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
