@@ -9,8 +9,9 @@ import Foundation
 
 class LoginViewModel: ObservableObject {
     
-    var username: String = ""
-    var password: String = ""
+    @Published var username: String = ""
+    @Published var password: String = ""
+    @Published var invalidCredentials: Bool = false
     @Published var showProgressView = false
     @Published var isAuthenticated: Bool = false
     
@@ -21,27 +22,32 @@ class LoginViewModel: ObservableObject {
         Webservice().login(username: username, password: password) { result in
             self.showProgressView = false
             switch result {
-                case .success(let token):
-                    defaults.setValue(token, forKey: "jsonwebtoken")
-                    DispatchQueue.main.async {
-                        self.isAuthenticated = true
-                        completion(true)
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
+            case .success(let token):
+                defaults.setValue(token, forKey: "jsonwebtoken")
+                DispatchQueue.main.async {
+                    self.isAuthenticated = true
+                    completion(true)
+                    KeychainHelper.standard.save(token, service: "token", account: "DeepVision")
+                }
+            case .failure(let error):
+                // defaults.removeObject(forKey: "jsonwebtoken")
+                self.invalidCredentials = true
+                print(error.localizedDescription)
                 completion(false)
             }
         }
     }
     
-    func signout() {
-           
-           let defaults = UserDefaults.standard
-           defaults.removeObject(forKey: "jsonwebtoken")
-           DispatchQueue.main.async {
-               self.isAuthenticated = false
-           }
-           
-       }
+    func signout(completion: @escaping (Bool) -> Void) {
+        print("Logging out")
+        KeychainHelper.standard.delete(service: "token", account: "DeepVision")
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "jsonwebtoken")
+        DispatchQueue.main.async {
+            self.isAuthenticated = false
+            completion(false)
+        }
+        
+    }
     
 }

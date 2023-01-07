@@ -10,6 +10,19 @@ import SwiftUI
 @main
 struct loginApp: App {
     @StateObject var authentication = Authentication()
+    
+    init(){
+        let token = DeepVision.KeychainHelper.standard.read(service: "token", account: "DeepVision", type: String.self)
+        let defaults = UserDefaults.standard
+        
+        if(token != nil){
+            defaults.setValue(token, forKey: "jsonwebtoken")
+        }else{
+            defaults.removeObject(forKey: "jsonwebtoken")
+        }
+        
+    }
+    
     var body: some Scene {
         WindowGroup {
             if authentication.isValidated {

@@ -7,6 +7,19 @@
 
 import SwiftUI
 
+extension View {
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content) -> some View {
+
+        ZStack(alignment: alignment) {
+            placeholder().opacity(shouldShow ? 1 : 0)
+            self
+        }
+    }
+}
+
 struct SignInScreenView: View {
     @StateObject var loginVM = LoginViewModel()
     @EnvironmentObject var authentication: Authentication
@@ -19,16 +32,21 @@ struct SignInScreenView: View {
                 Spacer()
                 
                 VStack {
-                    Text("Sign In")
+                    Text("Deep Vision")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .padding(.bottom, 30)
                     
                     
-                    Image(uiImage: #imageLiteral(resourceName: "onboard"))
+                    Image(uiImage: #imageLiteral(resourceName: "deepvision"))
+                        .resizable()
+                        .frame(width: 400, height: 400)
                     
                     
-                    TextField("Username", text: $loginVM.username)
+                    TextField("", text: $loginVM.username, onEditingChanged: { x in print(loginVM.username)})
+                        .placeholder(when: loginVM.username.isEmpty) {
+                            Text("Username").foregroundColor(Color("PlaceholderColor"))
+                        }
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -37,14 +55,19 @@ struct SignInScreenView: View {
                         .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0, y: 16)
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
+                        .foregroundColor(Color.black)
                     
-                    SecureField("Password", text: $loginVM.password)
+                    SecureField("", text: $loginVM.password)
+                        .placeholder(when: loginVM.password.isEmpty) {
+                            Text("Password").foregroundColor(Color("PlaceholderColor"))
+                        }
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.white)
                         .cornerRadius(50.0)
                         .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0, y: 16)
+                        .foregroundColor(Color.black)
                     
                     Button {
                         loginVM.login { success in
@@ -63,6 +86,21 @@ struct SignInScreenView: View {
                                 .background(Color("PrimaryColor"))
                                 .cornerRadius(50)
                         }
+                    }//.background(Color(red: 1, green: 152, blue: 183))
+                    
+                    
+                    if loginVM.invalidCredentials {
+                        if loginVM.username.isEmpty {
+                            Text("Username Field is Empty.").foregroundColor(.red).font(.system(size: 20, weight: .semibold))
+                        } else {
+                            if loginVM.password.isEmpty {
+                                Text("Password Field is Empty.").foregroundColor(.red).font(.system(size: 20, weight: .semibold))
+                            } else {
+                                Text("Invalid Credentials.").foregroundColor(.red).font(.system(size: 20, weight: .bold))
+                            }
+                        }
+                        
+                    
                     }
                     
                 }
@@ -78,9 +116,8 @@ struct SignInScreenView: View {
                 
                 
                 
-                SocalLoginButton(image: Image(uiImage: #imageLiteral(resourceName: "apple")), text: Text("Sign in with Apple")).padding(.top)
+                SocalLoginButton(image: Image(uiImage: #imageLiteral(resourceName: "apple")), text: Text("Sign in with Apple")).padding(.top).foregroundColor(Color.black)
                 
-                SocalLoginButton(image: Image(uiImage: #imageLiteral(resourceName: "google")), text: Text("Sign in with Google"))
                 
             }
             .padding()

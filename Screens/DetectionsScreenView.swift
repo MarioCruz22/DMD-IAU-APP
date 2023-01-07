@@ -10,7 +10,7 @@ import UIKit
 
 struct DetectionsScreenView: View {
     var body: some View {
-        storyBoardView().edgesIgnoringSafeArea(.all)
+        storyBoardView()
     }
 }
 

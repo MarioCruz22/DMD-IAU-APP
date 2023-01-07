@@ -11,19 +11,19 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Detections" id="BYZ-38-t0r" customClass="ViewController" customModule="ObjectDetection_CoreML" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detections" id="BYZ-38-t0r" customClass="ViewController" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UrN-1E-L02">
                                 <rect key="frame" x="0.0" y="67" width="375" height="500"/>
-                                <color key="backgroundColor" red="0.86274509799999999" green="0.63529411759999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UrN-1E-L02" secondAttribute="height" multiplier="375:500" id="PF1-UQ-hYD"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="am0-wE-ezc" customClass="DrawingBoundingBoxView" customModule="ObjectDetection_CoreML" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="am0-wE-ezc" customClass="DrawingBoundingBoxView" customModule="login" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="67" width="375" height="500"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>

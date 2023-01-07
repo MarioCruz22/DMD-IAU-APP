@@ -8,7 +8,10 @@
 import SwiftUI
 
 class Authentication: ObservableObject {
-    @Published var isValidated = false
+    @Published var isValidated = DeepVision.KeychainHelper.standard.read(service: "token",
+                                                                    account: "DeepVision",
+                                                                    type: String.self) != nil
+
     
     enum AuthenticationError: Error, LocalizedError, Identifiable {
         case invalidCredentials
@@ -30,4 +33,6 @@ class Authentication: ObservableObject {
             isValidated = success
         }
     }
+    
+    
 }
